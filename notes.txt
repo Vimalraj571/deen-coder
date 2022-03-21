@@ -1,0 +1,40 @@
+
+1.UI
+In flex
+---------------------------
+      TITLE Sticky
+---------------------------
+    |     title      |
+    |   dropdown     |
+    | |    | |    |  |
+    | |    | |    |  |
+    | | box| |box |  |
+___________________________
+         footer
+___________________________
+
+---------------------------
+      TITLE Sticky
+---------------------------
+    |     title      |
+    |   dropdown     |
+    | input    output|
+    |     button     |
+    |                |
+___________________________
+         footer
+___________________________
+
+
+        <!-- 
+        nav + home all sticky
+        list as cards  
+          logo name
+        -->
+        <!-- Title -->
+        <!--
+            if Lot dropdown
+            else only two 
+        -->
+        <!-- after selected function -->
+        <!-- Load input,output and submit btn -->

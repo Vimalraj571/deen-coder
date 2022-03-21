@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", "Work Sans", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0;
+  height: 50px;
+  padding-top: 10px;
+  box-shadow: 10px 5px 5px #dadada;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.logo {
+  padding: 10px;
+}
+.title {
+}
+.column {
+  display: flex;
+}
+.main {
+  flex-grow: 2;
+  width: 70%;
+  height: 88vh;
+  order: 2;
+}
+.left-aside {
+  width: 10%;
+  flex-grow: 1;
+  height: 40rem;
+  order: 1;
+}
+.right-aside {
+  width: 10%;
+  flex-grow: 1;
+  height: 88vh;
+  order: 3;
+}
+.footer {
+  font-size: small;
+  text-align: center;
+}
+.list-functions {
+  display: grid;
+  gap: 5%;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.card {
+  width: 25rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2%;
+  transition: box-shadow 0.5s;
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 5px 1px #838383;
+}
+
+.card-logo {
+  order: 1;
+  padding-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.title-desc {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  padding: 5%;
+}
+
+.card-title {
+  order: 2;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.card-desc {
+  order: 2;
+}
+
+.sub-title {
+  padding: 2%;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+/* 
+ On each page
+*/
+
+.custom-text {
+  padding: 10%;
+  text-align: center;
+  padding-top: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-input {
+  height: 10rem;
+  margin: 3rem;
+  width: 20rem;
+  border-radius: 5px;
+  border: 3px solid #e2e2e2;
+  transition: 180ms box-shadow ease-in-out;
+}
+
+.custom-input:focus{
+  border-color: #e3c5ff;
+  box-shadow: 3px 3px 5px 1px #b173ec;
+  outline: 3px solid transparent;
+}
+
+#submit-btn {
+  padding: 0.5%;
+  height: fit-content;
+  align-self: flex-end;
+}
+
+.select{
+  padding: 1%;
+}
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  .list-functions {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0;
+  }
+  .card {
+    width: auto;
+  }
+  .title {
+    font-size: smaller;
+    padding: 2%;
+  }
+  .sub-title {
+    font-size: x-small;
+    padding: 3%;
+  }
+  .column {
+    flex-direction: column;
+    padding: 10%;
+    padding-top: 3%;
+    height: 79rem;
+  }
+  .main {
+    width: 100%;
+  }
+  .right-aside {
+    display: none;
+  }
+  .left-aside {
+    display: none;
+  }
+  .card-logo {
+    /* padding-left: 0%; */
+    padding-right: 0%;
+    padding-top: 12%;
+  }
+  .card-desc {
+    font-size: 9.5px;
+  }
+  .custom-text {
+    flex-wrap: wrap;
+  }
+  #submit-btn {
+    flex: auto;
+  }
+  .custom-input {
+    width: 65vw;
+  }
+  .title-desc{
+    padding: 5%;
+    padding-top: 15%;
+  }
+  .card-title{
+    font-size: x-small;;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+  /* .card{
+    flex-direction: row-reverse;
+  }
+  .list-functions{
+
+  } */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+  .list-functions {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
+  }
+  .card {
+    width: auto;
+  }
+  .title {
+    font-size: smaller;
+    padding: 2%;
+  }
+  .sub-title {
+    font-size: x-small;
+    padding: 2%;
+  }
+  .column {
+    flex-direction: column;
+    padding: 10%;
+    padding-top: 3%;
+    height: 56rem;
+  }
+  .main {
+    width: 100%;
+  }
+  .right-aside {
+    display: none;
+  }
+  .left-aside {
+    display: none;
+  }
+  .logo {
+    padding: 2.5%;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  .card-title{
+    font-size: 15px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
