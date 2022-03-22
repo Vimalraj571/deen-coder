@@ -38,8 +38,14 @@
             <div class="select">
                 <select name="select-option" id="select-option">
                     <option value="">Select Option</option>
-                    <option value="encode">Encode</option>
-                    <option value="decode">Decode</option>
+                    <option value="encodeuri">Encode URI</option>
+                    <option value="decodeuri">Decode URI</option>
+                    <option value="encodebase64">Encode Base64</option>
+                    <option value="decodebase64">Decode Base64</option>
+                    <option value="hashmd5">MD5</option>
+                    <option value="sha1">SHA1</option>
+                    <option value="sha256">SHA256</option>
+                    <option value="sha512">SHA512</option>
                 </select>
             </div>
         </div>
@@ -50,6 +56,11 @@
         </div>
     </div>
     <script src="./deen-coder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script>
+        console.log('whats up!')
+        console.log('encrypted', CryptoJS.AES.encrypt('themessage', 'thekey'))
+    </script>
 </body>
 
 </html>
