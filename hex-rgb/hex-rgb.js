@@ -1,24 +1,9 @@
 console.log("Hex/RGB");
 
-const toRgb = (inputArr) => {
-  const r = parseInt(inputArr[1] + inputArr[2], 16);
-  const g = parseInt(inputArr[3] + inputArr[4], 16);
-  const b = parseInt(inputArr[5] + inputArr[6], 16);
-  return `${r},${g},${b}`;
+const toHex = (red, green, blue) => {
+  const rgb = (red << 16) | (green << 8) | (blue << 0);
+  return `#${(0x1000000 + rgb).toString(16).slice(1)}`;
 };
-
-// const util = (color) => {
-//   const hexadecimal = color.toString(16);
-//   return hexadecimal.length === 1 ? `0${hexadecimal}` : hexadecimal;
-// };
-
-// const toHex = (inputArr) =>
-//   `#${util(inputArr[0])}${util(inputArr[1])}${util(inputArr[2])}`;
-
-function toHex(r, g, b) {
-  console.log(r+''+g+''+b);
-  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
-}
 
 const inputBox = document.querySelector("#input-box");
 const outputBox = document.querySelector("#output-box");
@@ -33,21 +18,29 @@ inputBox.addEventListener("change", (e) => {
 });
 
 selectOption.addEventListener("change", (e) => {
-  console.log(e.target.value);
   selectedOption = e.target.value;
 });
+
+const toRgb = (hex) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `(${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(
+        result[3],
+        16
+      )})`
+    : null;
+};
 
 submitBtn.addEventListener("click", () => {
   if (selectedOption === "") {
     alert("selct atleast one");
   } else if (selectedOption === "hex") {
-    outputBox.value = toHex(tempInput);
+    if (tempInput.indexOf("(") !== -1 || tempInput.indexOf(")") !== -1) {
+      tempInput = tempInput.slice(1, tempInput.length - 1);
+    }
+    const arr = tempInput.split(",");
+    outputBox.value = toHex(arr[0], arr[1], arr[2]);
   } else {
-    // console.log(tempInput[1] + tempInput[2],tempInput[3] + tempInput[4],tempInput[5] + tempInput[6]);
-    outputBox.value = toRgb(
-      tempInput[1] + tempInput[2],
-      tempInput[3] + tempInput[4],
-      tempInput[5] + tempInput[6]
-    );
+    outputBox.value = toRgb(tempInput);
   }
 });
