@@ -1,7 +1,9 @@
-console.log("Encode/Decode URI");
+console.log("Hex/RGB");
 
-const encoder = (input) => encodeURIComponent(input);
-const decoder = (input) => decodeURIComponent(input);
+const toHex = (red, green, blue) => {
+  const rgb = (red << 16) | (green << 8) | (blue << 0);
+  return `#${(0x1000000 + rgb).toString(16).slice(1)}`;
+};
 
 const inputBox = document.querySelector("#input-box");
 const outputBox = document.querySelector("#output-box");
@@ -16,16 +18,29 @@ inputBox.addEventListener("change", (e) => {
 });
 
 selectOption.addEventListener("change", (e) => {
-  console.log(e.target.value);
   selectedOption = e.target.value;
 });
+
+const toRgb = (hex) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `(${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(
+        result[3],
+        16
+      )})`
+    : null;
+};
 
 submitBtn.addEventListener("click", () => {
   if (selectedOption === "") {
     alert("selct atleast one");
   } else if (selectedOption === "hex") {
-    outputBox.value = encoder(tempInput);
+    if (tempInput.indexOf("(") !== -1 || tempInput.indexOf(")") !== -1) {
+      tempInput = tempInput.slice(1, tempInput.length - 1);
+    }
+    const arr = tempInput.split(",");
+    outputBox.value = toHex(arr[0], arr[1], arr[2]);
   } else {
-    outputBox.value = decoder(tempInput);
+    outputBox.value = toRgb(tempInput);
   }
 });
