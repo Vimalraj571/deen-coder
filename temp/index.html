@@ -1,48 +1,129 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>EN/DE-CODERS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./logo/swiss-army-knife.ico">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Work+Sans:wght@500&display=swap"
+        rel="stylesheet">
+    <meta name="author" content="Vimalraj">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
+    <meta name="description" content="Simple Utility Tool For developers">
+    <title>Swiss Army Knife</title>
 </head>
 
 <body>
-    <div class="main-app">
-        <div class="title_page">
-            <h1>EN/DE-Coder for Different Algorithms</h1>
-        </div>
-        <div class="label_select">
-            <label for="select_fn">Select Option for Encode/Decode</label>
-            <select name="fn_todo" id="select_fn">
-                <option value="select_option">Select Option</option>
-                <option value="encode_uri">Encode URI</option>
-                <option value="decode_uri">Decode URI</option>
-                <option value="encode_base64">Encode Base64</option>
-                <option value="decode_base64">Decode Base64</option>
-                <option value="md5_hasher">MD5 Hasher</option>
-                <option value="sha_1">SHA-1 Hasher</option>
-                <option value="sha_256">SHA-256 Hasher</option>
-                <option value="sha_512">SHA-512 Hasher</option>
-            </select>
-        </div>
-        <!-- <div id="selected_fn">
+    <div class="container">
+        <header class="header">
+            <div class="nav-bar">
+                <div class="logo">
+                    <img src="./logo/swiss-army-knife.png" alt="logo" height="20px" width="20px">
+                </div>
+                <div class="title">
+                    <h1>Swiss Army Knife</h1>
+                </div>
+            </div>
+        </header>
+        <div class="column">
+            <main class="main">
+                <!-- If -->
+                <div class="sub-title">
+                    <h2>Select an Option</h2>
+                </div>
+                <div class="list-functions">
+                    <div class="card" id="en-de-code">
+                        <div class="card-logo">
+                            <img src="./logo/encode.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">Encode/Docode</div>
+                            <div class="card-desc">
+                                <p>Input a String and it will encode or decode the string based on the selected method.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="hexrgb">
+                        <div class="card-logo">
+                            <img src="./logo/rgb.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">HEX/RGB</div>
+                            <div class="card-desc">
+                                <p>Input a Hexcode or RGB and it will give you Hexcode or RGB.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-logo">
+                            <img src="./logo/timetable.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">Time Stamp</div>
+                            <div class="card-desc">
+                                <p>Timestamp Converter is a web tool that converts a date to a Unix timestamp. It also can convert a Unix timestamp to date.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-logo">
+                            <img src="./logo/meter.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">Unit</div>
+                            <div class="card-desc">
+                                <p>Quick, free, online unit converter that converts common units of measurement</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-logo">
+                            <img src="./logo/number-one.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">Number Base</div>
+                            <div class="card-desc">
+                                <p>Number Base Converter converts number from one base to another.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-logo">
+                            <img src="./logo/txt-file.png" height="100px" width="100px" />
+                        </div>
+                        <div class="title-desc">
+                            <div class="card-title">Text/String Util</div>
+                            <div class="card-desc">
+                                <p>Here you can find all the text utilities to help you in performing your activity much faster.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- else -->
+                <div class="io-btn">
+                    <div class="input-btn">
 
-        </div> -->
-        <!-- <div class="footer" id="footer_id">
-            <p>C to people</p>
-        </div> -->
+                    </div>
+                    <div class="main-btn">
+
+                    </div>
+                    <div class="output-btn">
+
+                    </div>
+                </div>
+            </main>
+            <aside class="left-aside"></aside>
+            <aside class="right-aside"></aside>
+        </div>
+        <footer class="footer">
+            <p>Made with <span><img src="./logo/heart.png" alt="heart" height="10px" width="10px"> </span> in JS.</p>
+        </footer>
     </div>
-    <script src="./uri.js"></script>
-    <script>
-        // window.onload(() => {
-        //     setTimeout(() => {
-        //         const body = document.querySelector("body");
-        //         const foot = document.createElement("div");
-        //         foot.setAttribute("id", "footer_id");
-        //         foot.setAttribute("class", "footer");
-        //         body.appendChild(foot);
-        //     }, 1000)
-        // })
-    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
