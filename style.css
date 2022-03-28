@@ -68,6 +68,7 @@ body {
   border-radius: 2%;
   transition: box-shadow 0.5s;
   border: 1px solid #eee;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -127,7 +128,7 @@ a {
   transition: 180ms box-shadow ease-in-out;
 }
 
-.custom-input:focus{
+.custom-input:focus {
   border-color: #e3c5ff;
   box-shadow: 3px 3px 5px 1px #b173ec;
   outline: 3px solid transparent;
@@ -139,7 +140,7 @@ a {
   align-self: flex-end;
 }
 
-.select{
+.select {
   padding: 1%;
 }
 
@@ -184,7 +185,6 @@ a {
     display: none;
   }
   .card-logo {
-    /* padding-left: 0%; */
     padding-right: 0%;
     padding-top: 12%;
   }
@@ -200,12 +200,12 @@ a {
   .custom-input {
     width: 65vw;
   }
-  .title-desc{
+  .title-desc {
     padding: 5%;
     padding-top: 15%;
   }
-  .card-title{
-    font-size: x-small;;
+  .card-title {
+    font-size: x-small;
   }
 }
 
@@ -269,7 +269,7 @@ a {
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* Styles */
-  .card-title{
+  .card-title {
     font-size: 15px;
   }
 }
