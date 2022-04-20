@@ -47,6 +47,8 @@ selectOption.addEventListener("change", (e) => {
 submitBtn.addEventListener("click", () => {
   if (selectedOption === "") {
     alert("Select At least One");
+  } else if (tempInput.length === 0) {
+    alert("Enter the input");
   } else if (selectedOption === "encodeuri") {
     outputBox.value = encoder(tempInput);
   } else if (selectedOption === "decodeuri") {

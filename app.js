@@ -6,6 +6,7 @@ const timeStamp = document.querySelector("#time-stamp");
 const unit = document.querySelector("#unit");
 const numberBase = document.querySelector("#number-base");
 const textString = document.querySelector("#text-string");
+const myIp = document.querySelector("#my-ip");
 
 endeCoder.addEventListener("click", () => {
   console.log(window.location.href);
@@ -32,7 +33,7 @@ numberBase.addEventListener("click", () => {
   window.location.href = `./numberbase/numberbase.html`;
 });
 
-textString.addEventListener("click", () => {
+myIp.addEventListener("click", () => {
   console.log(window.location.href);
-  window.location.href = `./textstring/textstring.html`;
+  window.location.href = `./ip/ip.html`;
 });

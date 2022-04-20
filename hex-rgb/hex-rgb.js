@@ -34,6 +34,8 @@ const toRgb = (hex) => {
 submitBtn.addEventListener("click", () => {
   if (selectedOption === "") {
     alert("selct atleast one");
+  } else if (tempInput.length === 0) {
+    alert("Enter the input");
   } else if (selectedOption === "hex") {
     if (tempInput.indexOf("(") !== -1 || tempInput.indexOf(")") !== -1) {
       tempInput = tempInput.slice(1, tempInput.length - 1);
