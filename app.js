@@ -7,6 +7,7 @@ const unit = document.querySelector("#unit");
 const numberBase = document.querySelector("#number-base");
 const textString = document.querySelector("#text-string");
 const myIp = document.querySelector("#my-ip");
+const timer = document.querySelector("#timer-stopwatch");
 
 endeCoder.addEventListener("click", () => {
   console.log(window.location.href);
@@ -36,4 +37,9 @@ numberBase.addEventListener("click", () => {
 myIp.addEventListener("click", () => {
   console.log(window.location.href);
   window.location.href = `./ip/ip.html`;
+});
+
+timer.addEventListener("click", () => {
+  console.log(window.location.href);
+  window.location.href = `./timer/timer.html`;
 });
