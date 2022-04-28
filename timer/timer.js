@@ -91,3 +91,5 @@ resetWatchStop.addEventListener("click", () => {
   minStopWatch.value = 0;
   secStopWatch.value = 0;
 });
+
+// if(min == 0 && sec == 0 && hr == 0) else (sec!=0) sec++ else (min!=0 && sec == 0) min ++ && sec = 59 else (hr!=0 && min==0) hr ++ && min = 60 

@@ -1,17 +1,6 @@
 console.log("TimeStamp Converter");
 
-const dateToEpoc = (input) => {
-  const tempDateObj = new Date(0);
-  tempDateObj.setUTCSeconds(input);
-  return {
-    year: tempDateObj.getFullYear(),
-    month: tempDateObj.getMonth() + 1,
-    date: tempDateObj.getDate(),
-    hours: tempDateObj.getHours(),
-    minutes: tempDateObj.getMinutes(),
-    seconds: tempDateObj.getSeconds(),
-  };
-};
+const dateToEpoc = (input) => new Date(input).valueOf() / 1000;
 const epocToDate = (input) => {
   const date = new Date(0);
   date.setUTCSeconds(input);
@@ -40,14 +29,8 @@ submitBtn.addEventListener("click", () => {
   } else if (tempInput.length === 0) {
     alert("Enter the input");
   } else if (selectedOption === "dateToEpoc") {
-    outputBox.value = dateToEpoc(tempInput);
+    outputBox.value = JSON.stringify(dateToEpoc(tempInput));
   } else {
-    // const tempInArray = [];
-    // const temp = ["Date", "Month", "Year", "Hour", "Minutes", "Second"];
-    // for (let i = 0; i < temp.length; i += 1) {
-    //   tempInArray.push(tempInput);
-    // }
-    console.log(new Date("1650215029"));
-    outputBox.value = epocToDate(new Date(tempInput));
+    outputBox.value = epocToDate(tempInput);
   }
 });
