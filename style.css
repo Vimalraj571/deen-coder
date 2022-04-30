@@ -17,6 +17,11 @@ body {
   height: 50px;
   padding-top: 10px;
   box-shadow: 10px 5px 5px #dadada;
+  top: 0;
+  left: 0;
+  position: sticky;
+  right: 0;
+  background: rgb(255, 255, 255);
 }
 .nav-bar {
   display: flex;
@@ -52,6 +57,12 @@ body {
 .footer {
   font-size: small;
   text-align: center;
+  color: white;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  background: #c182ff;
 }
 .list-functions {
   display: grid;
@@ -142,6 +153,26 @@ a {
 
 .select {
   padding: 1%;
+}
+
+.btn-custom {
+  padding: 15px 32px;
+  background-color: #405cf5;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 6px 7px 10px 5px #7e7e7e;
+  transition: all 0.5s ease-out;
+}
+
+.btn-custom:hover {
+  box-shadow: 3px 3px 10px 5px #7e7e7e;
+}
+
+.custom-text-strings{
+  flex-direction: column;
+  align-items: center;
 }
 
 /*

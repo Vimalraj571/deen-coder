@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../logo/swiss-army-knife.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <meta name="author" content="Vimalraj">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=" />
+    <meta name="description" content="Simple Utility Tool For developers">
+    <title>Swiss Army Knife</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo/swiss-army-knife.png" alt="logo" height="20px" width="20px">
+                    </a>
+                </div>
+                <div class="title">
+                    <a href="../index.html">
+                        <h1>Swiss Army Knife</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="container" style="text-align: center;padding-top: 10vh;">
+            <div class="timer">
+                <div class="heading">
+                    <h1>TIMER</h1>
+                </div>
+                <div class="timer-input" style="padding: 1%;">
+                    <input min="0" max="24" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="hr-timer" style="width: 40px;" value="0"> :
+                    <input min="0" max="60" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="min-timer" style="width: 40px;" value="0"> :
+                    <input min="0" max="60" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="sec-timer" style="width: 40px;" value="0">
+                </div>
+                <div class="timer-btn" style="padding: 1%;">
+                    <input class="btn-custom" type="submit" id="timer-start" value="Start">
+                    <input class="btn-custom" type="submit" id="timer-reset" value="Reset">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="stopwatch">
+                <div class="heading">
+                    <h1>STOPWATCH</h1>
+                </div>
+                <div class="stop-watch-input" style="padding: 1%;">
+                    <input min="0" max="24" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="hr-stop-watch" style="width: 40px;" value="0"> :
+                    <input min="0" max="60" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="min-stop-watch" style="width: 40px;" value="0"> :
+                    <input min="0" max="60" class="custom-input" style="height: 35px;font-size: 30px;width: 50px;margin: auto;" type="number" id="sec-stop-watch" style="width: 40px;" value="0">
+                </div>
+                <div class="stop-watch-btn" style="padding: 1%;">
+                    <input class="btn-custom" type="submit" id="stop-watch-start" value="Start">
+                    <input class="btn-custom" type="submit" id="stop-watch-stop" value="Pause">
+                    <input class="btn-custom" type="submit" id="stop-watch-reset" value="Reset">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Made with <span><img src="../logo/heart.png" alt="heart" height="10px" width="10px"> </span> in JS.</p>
+        </footer>
+    </div>
+    <script src="./timer.js"></script>
+</body>
+
+</html>

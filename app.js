@@ -6,6 +6,9 @@ const timeStamp = document.querySelector("#time-stamp");
 const unit = document.querySelector("#unit");
 const numberBase = document.querySelector("#number-base");
 const textString = document.querySelector("#text-string");
+const myIp = document.querySelector("#my-ip");
+const timer = document.querySelector("#timer-stopwatch");
+const translator = document.querySelector("#translator");
 
 endeCoder.addEventListener("click", () => {
   console.log(window.location.href);
@@ -35,4 +38,19 @@ numberBase.addEventListener("click", () => {
 textString.addEventListener("click", () => {
   console.log(window.location.href);
   window.location.href = `./textstring/textstring.html`;
+});
+
+myIp.addEventListener("click", () => {
+  console.log(window.location.href);
+  window.location.href = `./ip/ip.html`;
+});
+
+timer.addEventListener("click", () => {
+  console.log(window.location.href);
+  window.location.href = `./timer/timer.html`;
+});
+
+translator.addEventListener("click", () => {
+  console.log(window.location.href);
+  window.location.href = `./lang-translate/lang-translate.html`;
 });
