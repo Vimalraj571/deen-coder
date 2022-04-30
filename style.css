@@ -170,6 +170,11 @@ a {
   box-shadow: 3px 3px 10px 5px #7e7e7e;
 }
 
+.custom-text-strings{
+  flex-direction: column;
+  align-items: center;
+}
+
 /*
  * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
  */
